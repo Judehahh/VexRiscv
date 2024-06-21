@@ -522,17 +522,30 @@ object MuraxDhrystoneReadyMulDivStatic{
 //Will blink led and echo UART RX to UART TX   (in the verilator sim, type some text and press enter to send UART frame to the Murax RX pin)
 object MuraxWithRamInit{
   def main(args: Array[String]) {
-    SpinalVerilog(Murax(MuraxConfig.default.copy(onChipRamSize = 4 kB, onChipRamHexFile = "src/main/ressource/hex/muraxDemo.hex")))
+    SpinalVerilog(Murax(MuraxConfig.default.copy(onChipRamSize = 4 kB, onChipRamHexFile = "src/main/c/murax/hello_world/build/hello_world.hex")))
   }
 }
 
-object Murax_arty{
+object Murax_verilator{
+  def main(args: Array[String]) {
+    val hex = "src/main/c/murax/hello_world/build/hello_world.hex"
+    SpinalVerilog(Murax(MuraxConfig.default(false).copy(coreFrequency = 12 MHz,onChipRamSize = 32 kB, onChipRamHexFile = hex)))
+  }
+}
+
+object Murax_nano20k{
+  def main(args: Array[String]) {
+    val hex = "src/main/c/murax/hello_world/build/hello_world.hex"
+    SpinalVerilog(Murax(MuraxConfig.default(false).copy(coreFrequency = 27 MHz,onChipRamSize = 32 kB, onChipRamHexFile = hex)))
+  }
+}
+
+object Murax_nexys{
   def main(args: Array[String]) {
     val hex = "src/main/c/murax/hello_world/build/hello_world.hex"
     SpinalVerilog(Murax(MuraxConfig.default(false).copy(coreFrequency = 100 MHz,onChipRamSize = 32 kB, onChipRamHexFile = hex)))
   }
 }
-
 
 object MuraxAsicBlackBox extends App{
   println("Warning this soc do not has any rom to boot on.")

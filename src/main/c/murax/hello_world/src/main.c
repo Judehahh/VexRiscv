@@ -23,7 +23,7 @@ void delay(uint32_t loops){
 void main() {
     GPIO_A->OUTPUT_ENABLE = 0x0000000F;
 	GPIO_A->OUTPUT = 0x00000001;
-    println("hello world arty a7 v1");
+    println("hello world from MuraxSoC!");
     const int nleds = 4;
 	const int nloops = 2000000;
     while(1){
