@@ -1,0 +1,2 @@
+#!/bin/sh
+picocom --baud 115200 --imap lfcrlf /dev/ttyUSB1

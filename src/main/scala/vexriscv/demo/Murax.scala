@@ -528,14 +528,16 @@ object MuraxWithRamInit{
 
 object Murax_verilator{
   def main(args: Array[String]) {
-    val hex = "src/main/c/murax/hello_world/build/hello_world.hex"
+    // val hex = "src/main/c/murax/hello_world/build/hello_world.hex"
+    val hex = "/home/jude/Code/riscv/spinalhdl/VexRiscvSocSoftware/projects/murax/dhrystone/build/dhrystone.hex"
     SpinalVerilog(Murax(MuraxConfig.default(false).copy(coreFrequency = 12 MHz,onChipRamSize = 32 kB, onChipRamHexFile = hex)))
   }
 }
 
 object Murax_nano20k{
   def main(args: Array[String]) {
-    val hex = "src/main/c/murax/hello_world/build/hello_world.hex"
+    // val hex = "src/main/c/murax/hello_world/build/hello_world.hex"
+    val hex = "/home/jude/Code/riscv/spinalhdl/VexRiscvSocSoftware/projects/murax/dhrystone/build/dhrystone.hex"
     SpinalVerilog(Murax(MuraxConfig.default(false).copy(coreFrequency = 27 MHz,onChipRamSize = 32 kB, onChipRamHexFile = hex)))
   }
 }

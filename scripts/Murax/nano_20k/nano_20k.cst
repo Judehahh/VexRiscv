@@ -1,0 +1,15 @@
+IO_LOC "clk27"      4;
+IO_LOC "cpu_reset"  88;
+
+IO_LOC "user_led0"  15;
+IO_LOC "user_led1"  16;
+IO_LOC "user_led2"  17;
+IO_LOC "user_led3"  18;
+IO_LOC "user_led4"  19;
+IO_LOC "user_led5"  20;
+
+IO_LOC "user_btn0"  87;
+
+IO_LOC "serial_tx"  69;
+IO_LOC "serial_rx"  70;
+

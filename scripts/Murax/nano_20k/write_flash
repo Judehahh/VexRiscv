@@ -1,0 +1,2 @@
+#!/bin/sh
+openFPGALoader -b tangnano20k -f build/latest.fs

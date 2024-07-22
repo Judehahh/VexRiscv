@@ -20,7 +20,7 @@ SIFIVE_GCC_PACK ?= yes
 
 ifeq ($(SIFIVE_GCC_PACK),yes)
 	RISCV_NAME ?= riscv64-unknown-elf
-	RISCV_PATH ?= /opt/riscv/
+	RISCV_PATH ?= /home/jude/Tools/riscv64-unknown-elf-gcc-20171231-x86_64-linux-centos6
 else
 	RISCV_NAME ?= riscv32-unknown-elf
 	ifeq ($(MULDIV),yes)
